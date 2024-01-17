@@ -13,8 +13,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ImageServiceImpl implements ImageService {
 
-    @Autowired
-    ImageRepository imageRepository;
+    private final ImageRepository imageRepository;
 
     @Override
     public Image findById(Long id) {

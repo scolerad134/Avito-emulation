@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BuySellApplication {
+public class AvitoEmulationApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BuySellApplication.class, args);
+		SpringApplication.run(AvitoEmulationApplication.class, args);
 	}
 
 }

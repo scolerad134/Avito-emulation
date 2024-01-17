@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BUYSELL</title>
+    <title>Avito emulation</title>
 </head>
 <body>
-<h1>BUYSELL</h1><hr>
+<h1>Avito emulation</h1><hr>
 <h4>Подробная информация о товаре</h4>
 <#list images as img>
     <img src="/images/${img.id}" height="60px"/><br><br>
@@ -16,6 +16,7 @@
 <b>Автор: </b>${product.author}<br>
 <hr>
 <form action="/product/delete/${product.id}" method="post">
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
     <input type="submit" value="Удалить товар"/>
 </form>
 </body>
