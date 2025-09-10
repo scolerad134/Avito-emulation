@@ -31,7 +31,7 @@
 ### 1. Клонирование репозитория
 
 ```bash
-git clone <URL_ВАШЕГО_РЕПОЗИТОРИЯ>
+git clone https://github.com/scolerad134/Avito-emulation.git
 cd Avito-emulation
 ```
 
