@@ -108,7 +108,7 @@ cd Avito-emulation
 2.  Перейдите в корневой каталог проекта в терминале.
 3.  Соберите образы и запустите контейнеры:
     ```bash
-    docker-compose up --build
+    docker compose up --build
     ```
     При первом запуске Liquibase автоматически применит миграции к базе данных в контейнере. Если вы столкнулись с ошибками "relation already exists", вам, возможно, придется удалить volume базы данных (`docker volume rm <имя_проекта>_avito_db_data`, где `<имя_проекта>` - обычно имя каталога вашего проекта, например `avito-emulation_avito_db_data`) перед повторным запуском `docker-compose up --build`, чтобы дать Liquibase чистую базу данных.
 

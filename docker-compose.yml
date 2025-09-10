@@ -9,7 +9,7 @@ services:
       POSTGRES_USER: avito_owner
       POSTGRES_PASSWORD: myPassword # Убедитесь, что это совпадает с вашим application.properties
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - avito_db_data:/var/lib/postgresql/data
 
