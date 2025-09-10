@@ -18,7 +18,6 @@ import java.util.Map;
 
 @Controller
 @RequiredArgsConstructor
-//@PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
 public class AdminController {
     private final UserServiceimpl userService;
 

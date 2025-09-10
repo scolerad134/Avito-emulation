@@ -57,8 +57,6 @@ public class User implements UserDetails {
         localDateTime = LocalDateTime.now();
     }
 
-    //Security
-
     public boolean isAdmin() { return roles.contains(Role.ROLE_ADMIN); }
 
     @Override

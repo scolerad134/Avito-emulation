@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: avito_db
+      POSTGRES_USER: avito_owner
+      POSTGRES_PASSWORD: myPassword # Убедитесь, что это совпадает с вашим application.properties
+    ports:
+      - "5432:5432"
+    volumes:
+      - avito_db_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/avito_db?useSSL=false&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: avito_owner
+      SPRING_DATASOURCE_PASSWORD: myPassword # Убедитесь, что это совпадает с вашим application.properties
+    depends_on:
+      - db
+
+volumes:
+  avito_db_data:
